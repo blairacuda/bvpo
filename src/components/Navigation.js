@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import Home from './Home.js'
 import Events from './Events.js'
 import Contact from './Contact.js'
@@ -12,7 +12,7 @@ function Navigation() {
     return (
         <div>
             <Navbar expand="lg">
-                <Navbar.Brand href="/">
+                <Link to="/">
                     <img
                         alt=""
                         src="Jaguar.png"
@@ -20,34 +20,34 @@ function Navigation() {
                         height="40"
                         className="d-inline-block align-top"
                     />
-                </Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                             <NavDropdown title="What We Fund" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/amityinterns">Amity Interns</NavDropdown.Item>
-                                <NavDropdown.Item href="/fooddrives">Food Drives</NavDropdown.Item>
-                                <NavDropdown.Item href="/staffappreciation">Staff Appreciation</NavDropdown.Item>
+                                <Link className="dropdown-item" to="/amityinterns">Amity Interns</Link>
+                                <Link className="dropdown-item" to="/fooddrives">Food Drives</Link>
+                                <Link className="dropdown-item" to="/staffappreciation">Staff Appreciation</Link>
                             </NavDropdown>
                             <NavDropdown title="Fundraisers" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/subasta">Subasta</NavDropdown.Item>
-                                <NavDropdown.Item href="/jogathon">Job-A-Thon</NavDropdown.Item>
-                                <NavDropdown.Item href="/bookfair">Book Fair</NavDropdown.Item>
-                                <NavDropdown.Item href="/pizza">Papa's Pizza Coupons</NavDropdown.Item>
-                                <NavDropdown.Item href="/boxtops">Box Tops</NavDropdown.Item>
-                                <NavDropdown.Item href="/coindrive">Coin Drive</NavDropdown.Item>
+                                <Link className="dropdown-item" to="/subasta">Subasta</Link>
+                                <Link className="dropdown-item" to="/jogathon">Job-A-Thon</Link>
+                                <Link className="dropdown-item" to="/bookfair">Book Fair</Link>
+                                <Link className="dropdown-item" to="/pizza">Papa's Pizza Coupons</Link>
+                                <Link className="dropdown-item" to="/boxtops">Box Tops</Link>
+                                <Link className="dropdown-item" to="/coindrive">Coin Drive</Link>
                             </NavDropdown>
                             <NavDropdown title="About" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/board">Board</NavDropdown.Item>
-                                <NavDropdown.Item href="/minutes">Minutes</NavDropdown.Item>
-                                <NavDropdown.Item href="/bylaws">Bylaws</NavDropdown.Item>
+                                <Link className="dropdown-item" to="/board">Board</Link>
+                                <Link className="dropdown-item" to="/minutes">Minutes</Link>
+                                <Link className="dropdown-item" to="/bylaws">Bylaws</Link>
                             </NavDropdown>
-                        <Nav.Link href="/events">Events</Nav.Link>
-                        <Nav.Link href="/contact">Contact</Nav.Link>
+                        <Link className="navbar-light navbar-nav nav-link" to="/events">Events</Link>
+                        <Link className="navbar-light navbar-nav nav-link" to="/contact">Contact</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-
+            
             <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route path='/amityinterns' component={AmityInterns}/>
