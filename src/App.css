@@ -36,19 +36,20 @@
 
 .pageHeader{
   font-size: 32px;
+  text-align: center;
 }
 
 .basicText{
   font-size: 20px;
 }
 
+.noMargin{
+  margin: 0;
+}
+
 .sectionHeader{
   font-size: 22px;
   font-weight: bold;
-}
-
-.centerText{
-  text-align: center;
 }
 
 .dropdown-menu {

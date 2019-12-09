@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './Home.js'
 import Events from './Events.js'
 import Contact from './Contact.js'
+import AmityInterns from './AmityInterns.js';
 
 function Navigation() {
     return (
@@ -49,6 +50,7 @@ function Navigation() {
 
             <Switch>
                 <Route exact path='/' component={Home}/>
+                <Route path='/amityinterns' component={AmityInterns}/>
                 <Route path='/events' component={Events}/>
                 <Route path='/contactus' component={Contact}/>
             </Switch>
