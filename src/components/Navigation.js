@@ -7,6 +7,8 @@ import Home from './Home.js'
 import Events from './Events.js'
 import Contact from './Contact.js'
 import AmityInterns from './AmityInterns.js';
+import FoodDrives from './FoodDrives.js';
+import StaffAppreciation from './StaffAppreciation.js';
 
 function Navigation() {
     return (
@@ -51,6 +53,8 @@ function Navigation() {
             <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route path='/amityinterns' component={AmityInterns}/>
+                <Route path='/fooddrives' component={FoodDrives}/>
+                <Route path='/staffappreciation' component={StaffAppreciation}/>
                 <Route path='/events' component={Events}/>
                 <Route path='/contactus' component={Contact}/>
             </Switch>
